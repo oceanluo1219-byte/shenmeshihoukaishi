@@ -1,10 +1,12 @@
 import "./globals.css";
 import { Countdown } from "./countdown";
+import { headers } from "next/headers";
 
-export default function Home() {
-  const domain = "shenmeshihoukaishi.ocean-luo1219.workers.dev";
-  const calendarUrl = `https://${domain}/api/calendar`;
-  const webcalUrl = `webcal://${domain}/api/calendar`;
+export default async function Home() {
+  const h = await headers();
+  const host = h.get("host") ?? "shenmeshihoukaishi.vercel.app";
+  const calendarUrl = `https://${host}/api/calendar`;
+  const webcalUrl = `webcal://${host}/api/calendar`;
 
   return (
     <div className="container">

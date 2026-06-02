@@ -1,15 +1,17 @@
 import "../globals.css";
 import { Countdown } from "../countdown";
+import { headers } from "next/headers";
 
 export const metadata = {
   title: "2026 World Cup Schedule - Subscribe to Calendar",
   description: "Full 2026 FIFA World Cup schedule. One-click subscribe to your calendar with auto timezone conversion.",
 };
 
-export default function EnglishHome() {
-  const domain = "shenmeshihoukaishi.ocean-luo1219.workers.dev";
-  const calendarUrl = `https://${domain}/api/calendar/en`;
-  const webcalUrl = `webcal://${domain}/api/calendar/en`;
+export default async function EnglishHome() {
+  const h = await headers();
+  const host = h.get("host") ?? "shenmeshihoukaishi.vercel.app";
+  const calendarUrl = `https://${host}/api/calendar/en`;
+  const webcalUrl = `webcal://${host}/api/calendar/en`;
 
   return (
     <div className="container">
