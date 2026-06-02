@@ -2,7 +2,7 @@ import "./globals.css";
 import { Countdown } from "./countdown";
 
 export default function Home() {
-  const domain = "shenmeshihoukaishi.pages.dev";
+  const domain = "shenmeshihoukaishi.ocean-luo1219.workers.dev";
   const calendarUrl = `https://${domain}/api/calendar`;
   const webcalUrl = `webcal://${domain}/api/calendar`;
 

@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 export default function EnglishHome() {
-  const domain = "shenmeshihoukaishi.pages.dev";
+  const domain = "shenmeshihoukaishi.ocean-luo1219.workers.dev";
   const calendarUrl = `https://${domain}/api/calendar/en`;
   const webcalUrl = `webcal://${domain}/api/calendar/en`;
 
