@@ -1,10 +1,8 @@
 import "./globals.css";
 
 export default function Home() {
-  const domain =
-    process.env.VERCEL_URL ?? process.env.NEXT_PUBLIC_DOMAIN ?? "localhost:3000";
-  const protocol = domain.startsWith("localhost") ? "http" : "https";
-  const calendarUrl = `${protocol}://${domain}/api/calendar`;
+  const domain = "shenmeshihoukaishi.vercel.app";
+  const calendarUrl = `https://${domain}/api/calendar`;
   const webcalUrl = `webcal://${domain}/api/calendar`;
 
   return (
