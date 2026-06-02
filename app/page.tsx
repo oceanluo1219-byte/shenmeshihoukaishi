@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Countdown } from "./countdown";
 
 export default function Home() {
   const domain = "shenmeshihoukaishi.vercel.app";
@@ -13,8 +14,7 @@ export default function Home() {
           alt="FIFA World Cup 2026"
           className="hero-logo"
         />
-        <h1>2026 世界杯赛程</h1>
-        <p className="subtitle">一键订阅到你的日历，自动同步最新赛程</p>
+        <Countdown />
       </div>
 
       <div className="stats">
@@ -30,61 +30,31 @@ export default function Home() {
           <div className="stat-number">16</div>
           <div className="stat-label">座城市</div>
         </div>
-        <div className="stat">
-          <div className="stat-number">39</div>
-          <div className="stat-label">天赛期</div>
-        </div>
-      </div>
-
-      <div className="features">
-        <div className="feature">
-          <div className="feature-icon">🌍</div>
-          <div className="feature-text">自动适配你的时区</div>
-        </div>
-        <div className="feature">
-          <div className="feature-icon">🔔</div>
-          <div className="feature-text">开球前30分钟提醒</div>
-        </div>
-        <div className="feature">
-          <div className="feature-icon">🔄</div>
-          <div className="feature-text">淘汰赛对阵自动更新</div>
-        </div>
       </div>
 
       <div className="buttons">
-        <a href={webcalUrl} className="btn btn-ios">
-          <span className="btn-icon">📱</span>
+        <a href={webcalUrl} className="btn btn-primary">
           iPhone / iPad 一键订阅
         </a>
-        <a href={calendarUrl} className="btn btn-android">
-          <span className="btn-icon">📅</span>
+        <a href={calendarUrl} className="btn btn-secondary">
           Android / 其他设备下载
         </a>
       </div>
 
       <div className="info">
-        <h3>📋 使用说明</h3>
+        <h3>使用说明</h3>
         <ul>
-          <li>
-            iOS 用户点击上方按钮，在弹出的提示中选择「订阅」即可
-          </li>
-          <li>
-            Android 用户下载 .ics 文件后，用 Google 日历打开
-          </li>
-          <li>
-            订阅后日历会自动更新，淘汰赛对阵确定后无需手动操作
-          </li>
-          <li>
-            如需取消，在日历 App 中找到「2026世界杯赛程」删除即可
-          </li>
+          <li>iOS 用户点击上方按钮，选择「订阅」即可</li>
+          <li>Android 用户下载 .ics 文件后，用 Google 日历打开</li>
+          <li>订阅后日历会自动更新，淘汰赛对阵确定后无需手动操作</li>
+          <li>所有时间自动转换为你所在的时区</li>
+          <li>如需取消，在日历 App 中删除「2026世界杯赛程」即可</li>
+          <li>微信内无法直接订阅，请点击右上角「⋯」选择在浏览器中打开</li>
         </ul>
       </div>
 
       <div className="footer">
-        <p>赛程数据来源于 FIFA 官方 · 时间均为当地比赛时间，自动转换为你的时区</p>
-        <p style={{ marginTop: 8 }}>
-          2026 FIFA World Cup™ · 美国 / 加拿大 / 墨西哥
-        </p>
+        赛程数据来源于 FIFA 官方 · 2026 FIFA World Cup™
       </div>
     </div>
   );

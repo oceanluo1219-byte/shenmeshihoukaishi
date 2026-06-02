@@ -7,200 +7,154 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0d1117 100%);
+  background: #0a0a0a;
   color: #fff;
   min-height: 100vh;
 }
 
 .container {
-  max-width: 680px;
+  max-width: 480px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 48px 20px;
   text-align: center;
 }
 
+/* Hero */
 .hero {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .hero-logo {
-  width: 160px;
+  width: 140px;
   height: auto;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
-h1 {
-  font-size: 36px;
+/* Countdown */
+.countdown {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+}
+
+.countdown-number {
+  font-size: 64px;
   font-weight: 800;
-  margin-bottom: 8px;
-  background: linear-gradient(90deg, #f5a623, #f7dc6f, #f5a623);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #d4a843;
+  line-height: 1;
 }
 
-.subtitle {
+.countdown-label {
   font-size: 18px;
-  color: #8b95a5;
-  margin-bottom: 32px;
+  color: #888;
 }
 
-.features {
+/* Stats */
+.stats {
   display: flex;
   justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-bottom: 48px;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
-.feature {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 20px 24px;
-  width: 180px;
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
 }
 
-.feature-icon {
-  font-size: 32px;
-  margin-bottom: 8px;
+.stat-label {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
 }
 
-.feature-text {
-  font-size: 14px;
-  color: #c0c8d4;
-}
-
+/* Buttons */
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 48px;
+  gap: 12px;
+  margin-bottom: 40px;
 }
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  max-width: 380px;
-  padding: 16px 32px;
-  border-radius: 14px;
-  font-size: 17px;
+  display: block;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  cursor: pointer;
-  border: none;
-  transition: transform 0.15s, box-shadow 0.15s;
+  text-align: center;
+  transition: opacity 0.15s;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  opacity: 0.85;
 }
 
-.btn-ios {
-  background: linear-gradient(135deg, #007aff, #5856d6);
-  color: #fff;
+.btn-primary {
+  background: #d4a843;
+  color: #0a0a0a;
 }
 
-.btn-android {
-  background: linear-gradient(135deg, #34a853, #0f9d58);
-  color: #fff;
+.btn-secondary {
+  background: #1a1a1a;
+  color: #ccc;
+  border: 1px solid #333;
 }
 
-.btn-icon {
-  font-size: 22px;
-}
-
+/* Info */
 .info {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
   padding: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
   text-align: left;
 }
 
 .info h3 {
-  font-size: 16px;
-  color: #f5a623;
-  margin-bottom: 12px;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 14px;
+  font-weight: 600;
 }
 
 .info ul {
   list-style: none;
-  padding: 0;
 }
 
 .info li {
-  font-size: 14px;
-  color: #8b95a5;
-  padding: 6px 0;
-  padding-left: 20px;
+  font-size: 13px;
+  color: #666;
+  padding: 5px 0;
+  padding-left: 16px;
   position: relative;
+  line-height: 1.5;
 }
 
 .info li::before {
-  content: "✓";
+  content: "·";
   position: absolute;
-  left: 0;
-  color: #34a853;
+  left: 4px;
+  color: #444;
 }
 
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  margin-bottom: 48px;
-}
-
-.stat {
-  text-align: center;
-}
-
-.stat-number {
-  font-size: 36px;
-  font-weight: 800;
-  color: #f5a623;
-}
-
-.stat-label {
-  font-size: 13px;
-  color: #8b95a5;
-  margin-top: 4px;
-}
-
+/* Footer */
 .footer {
-  font-size: 12px;
-  color: #555;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 11px;
+  color: #333;
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 24px 16px;
+    padding: 32px 16px;
   }
-  h1 {
-    font-size: 28px;
-  }
-  .emoji-title {
-    font-size: 48px;
-  }
-  .features {
-    gap: 12px;
-  }
-  .feature {
-    width: 140px;
-    padding: 16px;
+  .countdown-number {
+    font-size: 52px;
   }
   .stats {
-    gap: 20px;
-  }
-  .stat-number {
-    font-size: 28px;
+    gap: 28px;
   }
 }
