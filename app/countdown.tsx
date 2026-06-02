@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-export function Countdown() {
+export function Countdown({ lang = "zh" }: { lang?: "zh" | "en" }) {
   const [days, setDays] = useState<number | null>(null);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export function Countdown() {
   return (
     <div className="countdown">
       <span className="countdown-number">{days}</span>
-      <span className="countdown-label">天后开幕</span>
+      <span className="countdown-label">{lang === "zh" ? "天后开幕" : "days to go"}</span>
     </div>
   );
 }

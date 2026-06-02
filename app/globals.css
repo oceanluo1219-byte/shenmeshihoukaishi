@@ -147,6 +147,17 @@ body {
   color: #333;
 }
 
+.lang-link {
+  color: #666;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1px;
+}
+
+.lang-link:hover {
+  color: #999;
+}
+
 @media (max-width: 480px) {
   .container {
     padding: 32px 16px;

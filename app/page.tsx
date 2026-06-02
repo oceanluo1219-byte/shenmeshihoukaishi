@@ -2,7 +2,7 @@ import "./globals.css";
 import { Countdown } from "./countdown";
 
 export default function Home() {
-  const domain = "shenmeshihoukaishi.vercel.app";
+  const domain = "shenmeshihoukaishi.pages.dev";
   const calendarUrl = `https://${domain}/api/calendar`;
   const webcalUrl = `webcal://${domain}/api/calendar`;
 
@@ -51,7 +51,8 @@ export default function Home() {
       </div>
 
       <div className="footer">
-        赛程数据来源于 FIFA 官方 · 2026 FIFA World Cup™
+        <p>赛程数据来源于 FIFA 官方 · 2026 FIFA World Cup™</p>
+        <p style={{ marginTop: 12 }}><a href="/en" className="lang-link">English Version</a></p>
       </div>
     </div>
   );
