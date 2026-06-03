@@ -4,19 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "dev": "next dev",
+    "start": "next start",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.19.11",
     "@types/node": "^25.9.1",
     "@types/react": "^19.2.16",
     "next": "^16.2.7",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "wrangler": "^4.97.0"
   }
 }
